@@ -1,0 +1,17 @@
+{
+    "gitlens.advanced.messages": {
+        "suppressFileNotUnderSourceControlWarning": true,
+        "suppressShowKeyBindingsNotice": true
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Material Theme Darker High Contrast",
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "window.zoomLevel": 0,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "color-highlight.markerType": "dot-before"
+}
