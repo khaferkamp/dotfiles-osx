@@ -1,4 +1,12 @@
-# Visual Studio Code
+# lsd alias
+alias ls="lsd"
+alias ll="lsd -l"
+alias lla="lsd -la"
+
+# mc alias
+#alias mc="LANG=en_EN.UTF-8 mc"
+
+## Visual Studio Code
 export PATH=$PATH:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin
 
 # Neovim
