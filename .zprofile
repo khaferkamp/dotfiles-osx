@@ -1,7 +1,7 @@
 # lsd alias
-alias ls="lsd"
-alias ll="lsd -l"
-alias lla="lsd -la"
+#alias ls="lsd"
+#alias ll="lsd -l"
+#alias lla="lsd -la"
 
 # mc alias
 #alias mc="LANG=en_EN.UTF-8 mc"
@@ -10,7 +10,8 @@ alias lla="lsd -la"
 export PATH=$PATH:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin
 
 # Neovim
-export PATH="$PATH:$HOME/Development/neovim/v0.3.4/bin"
+# will be provided by brew isntead of manual installation
+#export PATH="$PATH:$HOME/Development/neovim/v0.3.4/bin"
 alias vim="nvim"
 
 # spacemacs
