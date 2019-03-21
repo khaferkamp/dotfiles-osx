@@ -1,12 +1,6 @@
-# lsd alias
-#alias ls="lsd"
-#alias ll="lsd -l"
-#alias lla="lsd -la"
+################## EDIIOR SECTION ######################################################################################
 
-# mc alias
-#alias mc="LANG=en_EN.UTF-8 mc"
-
-## Visual Studio Code
+# Visual Studio Code
 export PATH=$PATH:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin
 
 # Neovim
@@ -14,11 +8,13 @@ export PATH=$PATH:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/R
 #export PATH="$PATH:$HOME/Development/neovim/v0.3.4/bin"
 alias vim="nvim"
 
-# spacemacs
+# spacemacs / emacs
+export PATH="/Applications/Emacs.app/Contents/MacOS:$PATH"
 alias spacemacs="Emacs"
 alias sm="Emacs"
 alias emacs="Emacs"
 
+################## LANG SECTION ######################################################################################
 # NodeJS
 NODE_VERSION="10.13.0"
 NODE_HOME="$HOME/Development/nodejs/v$NODE_VERSION/"
@@ -27,20 +23,8 @@ export PATH="$PATH:$NODE_HOME/bin"
 # Rust lang
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# new emacs version
-export PATH="/Applications/Emacs.app/Contents/MacOS:$PATH"
-
-# added by Snowflake SnowSQL installer v1.0
-export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
-#alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/SnowSQL'
-
 # Racket lang for DSL
 export PATH="$PATH:$HOME/Development/Racket/v7.2/bin"
-
-# Hugo
-HUGO_VERSION="0.54.0"
-HUGO_HOME="$HOME/Development/hugo/v$HUGO_VERSION/"
-export PATH="$PATH:$HUGO_HOME"
 
 # added by Anaconda3 5.3.0 installer
 # >>> conda init >>>
@@ -58,3 +42,14 @@ else
 fi
 unset __conda_setup
 # <<< conda init <<<
+
+################## TOOL SECTION ######################################################################################
+# added by Snowflake SnowSQL installer v1.0
+export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
+#alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/SnowSQL'
+
+# Hugo
+HUGO_VERSION="0.54.0"
+HUGO_HOME="$HOME/Development/hugo/v$HUGO_VERSION/"
+export PATH="$PATH:$HUGO_HOME"
+
