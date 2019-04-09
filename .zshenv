@@ -1,20 +1,18 @@
-################## EDIIOR SECTION ######################################################################################
+# ALIAS SECTION #
+alias lla="ls -lha"
+
+# EDIIOR SECTION #
 
 # Visual Studio Code
 export PATH=$PATH:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin
 
 # Neovim
-# will be provided by brew isntead of manual installation
-#export PATH="$PATH:$HOME/Development/neovim/v0.3.4/bin"
 alias vim="nvim"
 
-# spacemacs / emacs
-export PATH="/Applications/Emacs.app/Contents/MacOS:$PATH"
-alias spacemacs="Emacs"
-alias sm="Emacs"
-alias emacs="Emacs"
+# doom emacs
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
-################## LANG SECTION ######################################################################################
+# LANG SECTION #
 # NodeJS
 NODE_VERSION="10.13.0"
 NODE_HOME="$HOME/Development/nodejs/v$NODE_VERSION/"
@@ -25,6 +23,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # Racket lang for DSL
 export PATH="$PATH:$HOME/Development/Racket/v7.2/bin"
+
+# Go lang
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
 
 # added by Anaconda3 5.3.0 installer
 # >>> conda init >>>
@@ -43,7 +45,7 @@ fi
 unset __conda_setup
 # <<< conda init <<<
 
-################## TOOL SECTION ######################################################################################
+# TOOL SECTION #
 # added by Snowflake SnowSQL installer v1.0
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
 #alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/SnowSQL'
