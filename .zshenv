@@ -10,7 +10,7 @@ export PATH=$PATH:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/R
 alias vim="nvim"
 
 # doom emacs
-export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/doom-emacs/bin:$PATH"
 
 # LANG SECTION #
 # NodeJS
@@ -46,6 +46,9 @@ unset __conda_setup
 # <<< conda init <<<
 
 # TOOL SECTION #
+# Homebrew
+export PATH="/usr/local/sbin:$PATH"
+
 # added by Snowflake SnowSQL installer v1.0
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
 #alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/SnowSQL'
