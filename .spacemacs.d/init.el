@@ -42,7 +42,10 @@ This function should only modify configuration layer settings."
      racket
      rust
      go
-     osx
+     ;;osx
+     (osx  :variables 
+       osx-option-as 'meta
+       osx-right-option-as 'none)
      helm
      auto-completion
      better-defaults
