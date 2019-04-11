@@ -14,4 +14,8 @@
 	    (env . (("DOOMDIR" . "~/.doom.d")))
 	   )
  )
+  ("default" . (
+               (user-emacs-directory . "~/tinkermacs")
+              )
+  )
 )
