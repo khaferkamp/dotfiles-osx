@@ -1,3 +1,6 @@
+# terminal colors
+export TERM="xterm-256color"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -7,7 +10,8 @@ export ZSH="/Users/khaferkamp/.oh-my-zsh"
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
+#ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -65,55 +69,9 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-TERM=xterm-256color
-DEFAULT_USER=$USER
-
-# Powerlevel9k
-# Mode
-POWERLEVEL9K_MODE="nerdfont-complete"
-
-POWERLEVEL9K_CUSTOM_OSX_ICON="echo "
-#POWERLEVEL9K_CUSTOM_OSX_ICON_BACKGROUND=069
-POWERLEVEL9K_CUSTOM_OSX_ICON_BACKGROUND=black
-POWERLEVEL9K_CUSTOM_OSX_ICON_FOREGROUND=015
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_beginning"
-POWERLEVEL9K_TIME_BACKGROUND="black"
-POWERLEVEL9K_TIME_FOREGROUND="249"
-POWERLEVEL9K_TIME_FORMAT="\UF43A %D{%H:%M  \UF133  %d.%m.%y}"
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_VCS_CLEAN_FOREGROUND='black'
-POWERLEVEL9K_VCS_CLEAN_BACKGROUND='green'
-POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='black'
-POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='yellow'
-POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='white'
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='black'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_BACKGROUND='black'
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND='blue'
-POWERLEVEL9K_FOLDER_ICON=''
-POWERLEVEL9K_STATUS_OK_IN_NON_VERBOSE=true
-POWERLEVEL9K_STATUS_VERBOSE=false
-POWERLEVEL9K_COMMAND_EXECUTION_TIME_THRESHOLD=0
-POWERLEVEL9K_VCS_UNTRACKED_ICON='\u25CF'
-POWERLEVEL9K_VCS_UNSTAGED_ICON='\u00b1'
-POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON='\u2193'
-POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON='\u2191'
-POWERLEVEL9K_VCS_COMMIT_ICON="\uf417"
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="%F{blue}\u256D\u2500%f"
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="%F{blue}\u2570\uf460%f "
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context custom_osx_icon ssh root_indicator dir dir_writable vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(command_execution_time status time)
-HIST_STAMPS="dd/mm/yyyy"
-DISABLE_UPDATE_PROMPT=true
-
-# Powerlevel9k customizations
-#POWERLEVEL9K_USER_ICON="\uF415"
-#POWERLEVEL9K_ROOT_ICON="#"
-#POWERLEVEL9K_ALWAYS_SHOW_USER="false"
-#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context time user)
+#TERM=xterm-256color
+#DEFAULT_USER=$USER
+SPACESHIP_PROMPT_ADD_NEWLINE=false
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -142,6 +100,26 @@ DISABLE_UPDATE_PROMPT=true
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# opam configuration
+test -r /Users/khaferkamp/.opam/opam-init/init.zsh && . /Users/khaferkamp/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/khaferkamp/.sdkman"
 [[ -s "/Users/khaferkamp/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/khaferkamp/.sdkman/bin/sdkman-init.sh"
+
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/khaferkamp/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/khaferkamp/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/khaferkamp/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/khaferkamp/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
