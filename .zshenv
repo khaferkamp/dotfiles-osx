@@ -1,6 +1,9 @@
 # ALIAS SECTION #
 alias lla="ls -lha"
-alias doom-refresh="$HOME/doom-emacs/bin/doom -e ~/doom-emacs -p ~/.doom.d refresh"
+alias doom-refresh="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d refresh"
+alias doom-uprade="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d upgrade"
+alias doom-update="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d update"
+alias doom-doctor="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d doctor"
 
 # EDIIOR SECTION #
 
@@ -29,11 +32,14 @@ export PATH="$PATH:$NODE_HOME/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # Racket lang for DSL
-export PATH="$PATH:$HOME/Development/Racket/v7.4/bin"
+export PATH="$PATH:$HOME/Development/Racket/v7.6/bin"
 
 # Go lang
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
+
+# Julia lang
+export PATH="$PATH:$HOME/Development/Julia/Julia-1.3.app/Contents/Resources/julia/bin"
 
 # TOOL SECTION #
 # Homebrew
@@ -54,3 +60,5 @@ HUGO_VERSION="0.63.1"
 HUGO_HOME="$HOME/Development/hugo/v$HUGO_VERSION/"
 export PATH="$PATH:$HUGO_HOME"
 
+# xkbswitch
+export PATH="$PATH:$HOME/Development/xkbswitch/bin"
