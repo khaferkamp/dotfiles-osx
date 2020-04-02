@@ -1,9 +1,10 @@
 # ALIAS SECTION #
 alias lla="ls -lha"
 alias doom-refresh="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d refresh"
-alias doom-uprade="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d upgrade"
+alias doom-upgrade="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d upgrade"
 alias doom-update="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d update"
 alias doom-doctor="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d doctor"
+alias doom-env="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d env"
 
 # EDIIOR SECTION #
 
