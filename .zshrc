@@ -100,26 +100,27 @@ SPACESHIP_PROMPT_ADD_NEWLINE=false
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# opam configuration
-test -r /Users/khaferkamp/.opam/opam-init/init.zsh && . /Users/khaferkamp/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+# ALIAS SECTION #
+if [ "$(command -v exa)" ]; then
+    unalias -m 'll'
+    unalias -m 'l'
+    unalias -m 'la'
+    unalias -m 'ls'
+    alias ls='exa -G  --color auto --icons -a -s type'
+    alias ll='exa -l --color always --icons -a -s type'
+    alias la='exa -la --color always --icons -a -s type'
+    alias lha='exa -lha --color always --icons -a -s type'
+fi
+
+if [ "$(command -v bat)" ]; then
+  unalias -m 'cat'
+  #alias cat='bat -pp --theme="Nord"'
+  alias cat='bat -pp'
+fi
+# alias nrepl-clj="clj -A:nREPL -M nrepl.cmdline"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/khaferkamp/.sdkman"
 [[ -s "/Users/khaferkamp/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/khaferkamp/.sdkman/bin/sdkman-init.sh"
 
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/khaferkamp/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/khaferkamp/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/khaferkamp/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/khaferkamp/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 

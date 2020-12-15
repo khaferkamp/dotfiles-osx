@@ -1,13 +1,7 @@
-# ALIAS SECTION #
-alias lla="ls -lha"
-alias doom-refresh="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d refresh"
-alias doom-upgrade="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d upgrade"
-alias doom-update="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d update"
-alias doom-doctor="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d doctor"
-alias doom-env="$HOME/doom-emacs/bin/doom --emacsdir ~/doom-emacs --doomdir ~/.doom.d env"
+# Homebrew
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:/usr/local/sbin:/usr/local/bin"
 
 # EDIIOR SECTION #
-
 # Jetbrains Toolbox Scripts
 export PATH="$PATH:$HOME/Development/jetbrains-toolbox-scripts"
 
@@ -18,34 +12,39 @@ export PATH=$PATH:/Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/R
 alias vim="nvim"
 #export PATH=$PATH:$HOME/Development/gonvim.app/Contents/MacOS
 #export PATH=$PATH:$HOME/Development/nvim-qt.app/Contents/MacOS
-export PATH=$PATH:$HOME/Development/Onivim2.App/Contents/MacOS/Oni2
+#export PATH=$PATH:$HOME/Development/Onivim2.App/Contents/MacOS/Oni2
 
 # doom emacs
 export PATH="$HOME/doom-emacs/bin:$PATH"
 
 # LANG SECTION #
-# NodeJS
-NODE_VERSION="12.13.1"
-NODE_HOME="$HOME/Development/nodejs/v$NODE_VERSION/"
-export PATH="$PATH:$NODE_HOME/bin"
+# NodeJS (managed by nvm via homebrew)
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Rust lang
 export PATH="$HOME/.cargo/bin:$PATH"
-
-# Racket lang for DSL
-export PATH="$PATH:$HOME/Development/Racket/v7.6/bin"
 
 # Go lang
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
 # Julia lang
-export PATH="$PATH:$HOME/Development/Julia/Julia-1.3.app/Contents/Resources/julia/bin"
+export PATH="$PATH:$HOME/Development/Julia/Julia-1.5.app/Contents/Resources/julia/bin"
+
+# Coursier
+export PATH="$PATH:$HOME/Library/Application Support/Coursier/bin"
+
+# pyenv virtulenv by homebrew
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+if [[ -n $VIRTUAL_ENV && -e "${VIRTUAL_ENV}/bin/activate" ]]; then
+  source "${VIRTUAL_ENV}/bin/activate"
+fi
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # TOOL SECTION #
-# Homebrew
-export PATH="/usr/local/sbin:$PATH"
-
 # added by Snowflake SnowSQL installer v1.0
 export PATH=/Applications/SnowSQL.app/Contents/MacOS:$PATH
 #alias snowsql='/Applications/SnowSQL.app/Contents/MacOS/SnowSQL'
@@ -55,11 +54,6 @@ ESP_PATH="$HOME/Development/esp"
 ESP_IDF="$ESP_PATH/xtensa-esp32-elf/bin"
 export PATH="$PATH:$ESP_IDF"
 export IDF_PATH="$ESP_PATH/esp-idf"
-
-# Hugo
-HUGO_VERSION="0.63.1"
-HUGO_HOME="$HOME/Development/hugo/v$HUGO_VERSION/"
-export PATH="$PATH:$HUGO_HOME"
 
 # xkbswitch
 export PATH="$PATH:$HOME/Development/xkbswitch/bin"
